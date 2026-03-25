@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,498 +9,497 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-–bg:           #ffffff;
-–bg-muted:     #f9fafb;
-–bg-page:      #e8e4f0;
-–border:       #e4e4e7;
-–border-input: #d4d4d8;
-–text:         #09090b;
-–text-muted:   #71717a;
-–text-subtle:  #a1a1aa;
-–brand:        #5c1f4e;
-–brand-hover:  #4a1840;
-–brand-light:  #f5eef3;
-–brand-mid:    #e8d5e3;
-–teal:         #39686a;
-–teal-hover:   #2d5254;
-–teal-light:   #eef4f4;
-–radius-sm:    6px;
-–radius-md:    8px;
-–radius-lg:    12px;
-–shadow-sm:    0 1px 2px rgba(0,0,0,0.05);
-}
+  :root {
+    --bg:           #ffffff;
+    --bg-muted:     #f9fafb;
+    --bg-page:      #e8e4f0;
+    --border:       #e4e4e7;
+    --border-input: #d4d4d8;
+    --text:         #09090b;
+    --text-muted:   #71717a;
+    --text-subtle:  #a1a1aa;
+    --brand:        #5c1f4e;
+    --brand-hover:  #4a1840;
+    --brand-light:  #f5eef3;
+    --brand-mid:    #e8d5e3;
+    --teal:         #39686a;
+    --teal-hover:   #2d5254;
+    --teal-light:   #eef4f4;
+    --radius-sm:    6px;
+    --radius-md:    8px;
+    --radius-lg:    12px;
+    --shadow-sm:    0 1px 2px rgba(0,0,0,0.05);
+  }
 
-body {
-font-family: ‘Outfit’, ‘Hellix’, system-ui, sans-serif;
-background: var(–bg-page);
-color: var(–text);
-min-height: 100vh;
-padding: 48px 20px 72px;
-font-size: 15px;
-line-height: 1.6;
--webkit-font-smoothing: antialiased;
-}
+  body {
+    font-family: 'Outfit', 'Hellix', system-ui, sans-serif;
+    background: var(--bg-page);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 48px 20px 72px;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-.page { max-width: 640px; margin: 0 auto; }
+  .page { max-width: 640px; margin: 0 auto; }
 
-/* ── Shared card ── */
-.card {
-background: var(–bg);
-border: 1px solid var(–border);
-border-radius: var(–radius-lg);
-box-shadow: var(–shadow-sm);
-}
 
-/* ── Header card ── */
-.header-card {
-padding: 28px 32px;
-margin-bottom: 16px;
-}
-.header-card h1 {
-font-size: 26px;
-font-weight: 700;
-letter-spacing: -0.03em;
-color: var(–text);
-margin-bottom: 8px;
-}
-.header-card .desc {
-font-size: 14px;
-color: var(–text-muted);
-margin-bottom: 20px;
-line-height: 1.65;
-}
-.steps-list {
-list-style: none;
-display: flex;
-flex-direction: column;
-gap: 7px;
-}
-.steps-list li {
-display: flex;
-align-items: center;
-gap: 10px;
-font-size: 14px;
-color: var(–text-muted);
-}
-.step-num {
-width: 20px; height: 20px;
-border-radius: 50%;
-border: 1px solid var(–border-input);
-display: flex; align-items: center; justify-content: center;
-font-size: 11px;
-font-weight: 600;
-color: var(–text-muted);
-flex-shrink: 0;
-}
 
-/* ── Stories card ── */
-.stories-card { margin-bottom: 12px; }
+  /* ── Shared card ── */
+  .card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
 
-.section-head {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 16px 20px;
-border-bottom: 1px solid var(–border);
-}
-.section-head h2 {
-font-size: 14px;
-font-weight: 600;
-color: var(–text);
-}
-.count-badge {
-font-size: 12px;
-font-weight: 500;
-color: var(–text-subtle);
-background: var(–bg-muted);
-border: 1px solid var(–border);
-border-radius: 99px;
-padding: 3px 10px;
-}
+  /* ── Header card ── */
+  .header-card {
+    padding: 28px 32px;
+    margin-bottom: 16px;
+  }
+  .header-card h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .header-card .desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.65;
+  }
+  .steps-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .steps-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .step-num {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--border-input);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
 
-.tier-group-cards {
-padding: 8px 12px;
-display: flex;
-flex-direction: column;
-gap: 12px;
-}
+  /* ── Stories card ── */
+  .stories-card { margin-bottom: 12px; }
 
-/* ── Entry card ── */
-.entry-card {
-border: 1px solid var(–border);
-border-radius: var(–radius-md);
-background: var(–bg-muted);
-overflow: hidden;
-}
+  .section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-head h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .count-badge {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-subtle);
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 3px 10px;
+  }
 
-.entry-top {
-display: flex;
-align-items: flex-end;
-padding: 12px 12px 0;
-background: var(–bg-muted);
-gap: 8px;
-}
+  .tier-group-cards {
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-.category-wrap {
-flex: 1;
-display: flex;
-flex-direction: column;
-gap: 4px;
-}
-.category-label {
-font-size: 12px;
-font-weight: 600;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: var(–text-muted);
-}
-.tier-select {
-width: 100%;
-font-size: 14px;
-font-family: inherit;
-font-weight: 500;
-padding: 9px 11px;
-border-radius: var(–radius-sm);
-border: 1px solid var(–border-input);
-background: var(–bg);
-color: var(–text);
-cursor: pointer;
-transition: border-color 0.15s, box-shadow 0.15s;
-appearance: auto;
--webkit-appearance: auto;
-}
-.tier-select:focus {
-outline: none;
-border-color: var(–brand);
-box-shadow: 0 0 0 3px rgba(92,31,78,0.1);
-}
+  /* ── Entry card ── */
+  .entry-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-muted);
+    overflow: hidden;
+  }
 
-.remove-btn {
-background: none;
-border: 1px solid var(–border-input);
-border-radius: var(–radius-sm);
-font-size: 15px;
-color: var(–text-subtle);
-cursor: pointer;
-padding: 0 10px;
-width: 35px;
-height: 35px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
-align-self: flex-end;
-transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-.remove-btn:hover { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
+  .entry-top {
+    display: flex;
+    align-items: flex-end;
+    padding: 12px 12px 0;
+    background: var(--bg-muted);
+    gap: 8px;
+  }
 
-.entry-fields {
-padding: 12px;
-display: flex;
-flex-direction: column;
-gap: 8px;
-}
-.field-wrap { display: flex; flex-direction: column; gap: 4px; }
-.field-label {
-font-size: 11px;
-font-weight: 600;
-color: var(–text-muted);
-letter-spacing: 0.04em;
-text-transform: uppercase;
-}
-.entry-fields input,
-.entry-fields textarea {
-width: 100%;
-font-size: 14px;
-font-family: inherit;
-padding: 9px 11px;
-border-radius: var(–radius-sm);
-border: 1px solid var(–border-input);
-background: var(–bg);
-color: var(–text);
-resize: vertical;
-line-height: 1.6;
-transition: border-color 0.15s, box-shadow 0.15s;
-}
-.entry-fields input::placeholder,
-.entry-fields textarea::placeholder { color: var(–text-subtle); }
-.entry-fields input:focus,
-.entry-fields textarea:focus {
-outline: none;
-border-color: var(–brand);
-box-shadow: 0 0 0 3px rgba(92,31,78,0.1);
-}
-.entry-fields textarea { min-height: 68px; }
+  .category-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .category-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .tier-select {
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    padding: 9px 11px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-input);
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    appearance: auto;
+    -webkit-appearance: auto;
+  }
+  .tier-select:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(92,31,78,0.1);
+  }
 
-.field-hint {
-font-size: 13px;
-color: var(–text-subtle);
-line-height: 1.55;
-margin-top: 3px;
-}
+  .remove-btn {
+    background: none;
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    color: var(--text-subtle);
+    cursor: pointer;
+    padding: 0 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: flex-end;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .remove-btn:hover { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
 
-/* ── Error banner ── */
-.error-banner {
-display: none;
-background: #fef2f2;
-border: 1px solid #fecaca;
-border-radius: var(–radius-md);
-padding: 12px 16px;
-font-size: 13px;
-font-weight: 500;
-color: #dc2626;
-margin-bottom: 12px;
-}
-.error-banner.visible { display: block; }
+  .entry-fields {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .field-wrap { display: flex; flex-direction: column; gap: 4px; }
+  .field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .entry-fields input,
+  .entry-fields textarea {
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 9px 11px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-input);
+    background: var(--bg);
+    color: var(--text);
+    resize: vertical;
+    line-height: 1.6;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .entry-fields input::placeholder,
+  .entry-fields textarea::placeholder { color: var(--text-subtle); }
+  .entry-fields input:focus,
+  .entry-fields textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(92,31,78,0.1);
+  }
+  .entry-fields textarea { min-height: 68px; }
 
-/* ── Tier groups ── */
-.tier-group { margin-bottom: 8px; display: none; }
-.tier-group.visible { display: block; }
-.tier-group-header {
-display: flex;
-align-items: center;
-gap: 8px;
-padding: 8px 16px 6px;
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-border-bottom: 1px solid var(–border);
-}
-.tier-group-dot {
-width: 8px; height: 8px;
-border-radius: 50%;
-flex-shrink: 0;
-}
-.tier-group-cards { padding: 8px 12px; display: flex; flex-direction: column; gap: 8px; }
+  .field-hint {
+    font-size: 13px;
+    color: var(--text-subtle);
+    line-height: 1.55;
+    margin-top: 3px;
+  }
 
-/* ── Reorder buttons ── */
-.reorder-btns {
-display: flex;
-flex-direction: column;
-gap: 3px;
-}
-.reorder-btn {
-background: none;
-border: 1px solid var(–border-input);
-border-radius: var(–radius-sm);
-font-size: 11px;
-color: var(–text-subtle);
-cursor: pointer;
-width: 28px;
-height: 16px;
-display: flex;
-align-items: center;
-justify-content: center;
-line-height: 1;
-transition: background 0.15s, color 0.15s;
-}
-.reorder-btn:hover { background: var(–bg-muted); color: var(–text); }
-.reorder-btn:disabled { opacity: 0.25; cursor: default; }
+  /* ── Error banner ── */
+  .error-banner {
+    display: none;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #dc2626;
+    margin-bottom: 12px;
+  }
+  .error-banner.visible { display: block; }
 
-.tier-group-cards:empty + * { display: none; }
-.tier-group:not(:has(.entry-card)) .tier-group-header { opacity: 0.4; }
+  /* ── Tier groups ── */
+  .tier-group { margin-bottom: 8px; display: none; }
+  .tier-group.visible { display: block; }
+  .tier-group-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  .tier-group-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .tier-group-cards { padding: 8px 12px; display: flex; flex-direction: column; gap: 8px; }
 
-/* ── Add button ── */
-.add-btn {
-width: calc(100% - 32px);
-margin: 0 16px 16px;
-padding: 9px;
-font-size: 14px;
-font-family: inherit;
-font-weight: 500;
-border-radius: var(–radius-md);
-border: 1px dashed var(–border-input);
-background: transparent;
-color: var(–text-muted);
-cursor: pointer;
-transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-.add-btn:hover { border-color: var(–brand); color: var(–brand); background: var(–brand-light); }
+  /* ── Reorder buttons ── */
+  .reorder-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .reorder-btn {
+    background: none;
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-sm);
+    font-size: 11px;
+    color: var(--text-subtle);
+    cursor: pointer;
+    width: 28px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background 0.15s, color 0.15s;
+  }
+  .reorder-btn:hover { background: var(--bg-muted); color: var(--text); }
+  .reorder-btn:disabled { opacity: 0.25; cursor: default; }
 
-.add-btn-inline {
-font-size: 13px;
-font-family: inherit;
-font-weight: 600;
-padding: 6px 14px;
-border-radius: var(–radius-md);
-border: 1px solid var(–border-input);
-background: var(–bg);
-color: var(–brand);
-cursor: pointer;
-white-space: nowrap;
-transition: background 0.15s, border-color 0.15s;
-}
-.add-btn-inline:hover { background: var(–brand-light); border-color: var(–brand); }
+  .tier-group-cards:empty + * { display: none; }
+  .tier-group:not(:has(.entry-card)) .tier-group-header { opacity: 0.4; }
 
-/* ── Generate button ── */
-.generate-btn {
-width: 100%;
-padding: 12px;
-font-size: 15px;
-font-weight: 600;
-font-family: inherit;
-border-radius: var(–radius-md);
-border: none;
-background: var(–teal);
-color: #fff;
-cursor: pointer;
-margin-bottom: 20px;
-letter-spacing: -0.01em;
-transition: background 0.15s;
-box-shadow: var(–shadow-sm);
-}
-.generate-btn:hover { background: var(–teal-hover); }
-.generate-btn:active { transform: scale(0.995); }
+  /* ── Add button ── */
+  .add-btn {
+    width: calc(100% - 32px);
+    margin: 0 16px 16px;
+    padding: 9px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border-input);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+  .add-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-light); }
 
-/* ── Output ── */
-.output-wrap { display: none; }
-.output-wrap.visible { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .add-btn-inline {
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-input);
+    background: var(--bg);
+    color: var(--brand);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .add-btn-inline:hover { background: var(--brand-light); border-color: var(--brand); }
 
-.output-topbar {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 12px 16px;
-border-bottom: 1px solid var(–border);
-}
-.output-label {
-display: flex;
-align-items: center;
-gap: 6px;
-font-size: 12px;
-font-weight: 600;
-color: var(–text-muted);
-letter-spacing: 0.03em;
-text-transform: uppercase;
-}
-.ready-dot { width: 6px; height: 6px; border-radius: 50%; background: var(–teal); }
+  /* ── Generate button ── */
+  .generate-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--teal);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+    transition: background 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .generate-btn:hover { background: var(--teal-hover); }
+  .generate-btn:active { transform: scale(0.995); }
 
-.copy-btn {
-font-size: 13px;
-font-weight: 600;
-font-family: inherit;
-padding: 6px 16px;
-border-radius: var(–radius-sm);
-border: 1px solid var(–border-input);
-background: var(–bg);
-color: var(–text);
-cursor: pointer;
-transition: background 0.15s;
-}
-.copy-btn:hover { background: var(–bg-muted); }
-.copy-btn.copied { background: var(–teal); color: #fff; border-color: var(–teal); }
+  /* ── Output ── */
+  .output-wrap { display: none; }
+  .output-wrap.visible { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
 
-.output-box {
-padding: 16px;
-font-family: ‘Courier New’, monospace;
-font-size: 12px;
-color: var(–text-muted);
-white-space: pre;
-overflow-x: auto;
-overflow-y: auto;
-max-height: 280px;
-line-height: 1.7;
-background: var(–bg-muted);
-border-radius: 0 0 var(–radius-lg) var(–radius-lg);
-}
+  .output-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .output-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .ready-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
 
-/* ── Output tabs ── */
-.output-tabs {
-display: flex;
-gap: 4px;
-background: var(–bg-muted);
-border: 1px solid var(–border);
-border-radius: var(–radius-sm);
-padding: 3px;
-}
-.output-tab {
-font-size: 13px;
-font-weight: 600;
-font-family: inherit;
-padding: 5px 14px;
-border-radius: 4px;
-border: none;
-background: transparent;
-color: var(–text-muted);
-cursor: pointer;
-transition: background 0.15s, color 0.15s;
-}
-.output-tab.active {
-background: var(–bg);
-color: var(–text);
-box-shadow: 0 1px 2px rgba(0,0,0,0.08);
-}
-.output-tab:hover:not(.active) { color: var(–text); }
+  .copy-btn {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 6px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-input);
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .copy-btn:hover { background: var(--bg-muted); }
+  .copy-btn.copied { background: var(--teal); color: #fff; border-color: var(--teal); }
 
-.output-preview {
-padding: 20px;
-background: #ffffff;
-min-height: 120px;
-border-radius: 0 0 var(–radius-lg) var(–radius-lg);
-}
+  .output-box {
+    padding: 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 280px;
+    line-height: 1.7;
+    background: var(--bg-muted);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
 
-/* ── How to use ── */
-.howto-card { padding: 20px 24px; }
-.howto-card h3 { font-size: 13px; font-weight: 600; color: var(–text); margin-bottom: 10px; }
-.howto-card ol { padding-left: 16px; display: flex; flex-direction: column; gap: 5px; }
-.howto-card li { font-size: 13px; color: var(–text-muted); line-height: 1.5; }
-.howto-card li strong { color: var(–text); font-weight: 600; }
+  /* ── Output tabs ── */
+  .output-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+  }
+  .output-tab {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 5px 14px;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .output-tab.active {
+    background: var(--bg);
+    color: var(--text);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+  .output-tab:hover:not(.active) { color: var(--text); }
 
-/* ── Footer ── */
-.footer {
-text-align: center;
-font-size: 13px;
-color: #71717a;
-padding-top: 20px;
-margin-top: 8px;
-}
-.footer a {
-color: var(–brand);
-text-decoration: underline;
-text-underline-offset: 2px;
-font-weight: 500;
-}
-.footer a:hover { color: var(–brand); }
+  .output-preview {
+    padding: 20px;
+    background: #ffffff;
+    min-height: 120px;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
 
-/* ── Responsive ── */
-@media (max-width: 600px) {
-body { padding: 20px 12px 48px; }
-.page { max-width: 100%; }
-.header-card { padding: 20px 20px; }
-.header-card h1 { font-size: 20px; }
-.section-head { padding: 14px 16px; }
-.tier-group-header { padding: 8px 12px; }
-.tier-group-cards { padding: 8px 10px; }
-.entry-card { border-radius: var(–radius-sm); }
-.entry-top { flex-wrap: wrap; gap: 6px; padding: 10px 10px 0; }
-.category-wrap { width: 100%; }
-.tier-select { font-size: 14px; }
-.reorder-btns { flex-direction: row; }
-.reorder-btn { width: 28px; height: 28px; }
-.remove-btn { height: 35px; }
-.entry-fields { padding: 10px; }
-.generate-btn { font-size: 14px; padding: 12px; }
-.output-topbar { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
-.howto-card { padding: 16px; }
-.output-box { font-size: 11px; }
-}
+  /* ── How to use ── */
+  .howto-card { padding: 20px 24px; }
+  .howto-card h3 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+  .howto-card ol { padding-left: 16px; display: flex; flex-direction: column; gap: 5px; }
+  .howto-card li { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .howto-card li strong { color: var(--text); font-weight: 600; }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    color: #71717a;
+    padding-top: 20px;
+    margin-top: 8px;
+  }
+  .footer a {
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+  }
+  .footer a:hover { color: var(--brand); }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    body { padding: 20px 12px 48px; }
+    .page { max-width: 100%; }
+    .header-card { padding: 20px 20px; }
+    .header-card h1 { font-size: 20px; }
+    .section-head { padding: 14px 16px; }
+    .tier-group-header { padding: 8px 12px; }
+    .tier-group-cards { padding: 8px 10px; }
+    .entry-card { border-radius: var(--radius-sm); }
+    .entry-top { flex-wrap: wrap; gap: 6px; padding: 10px 10px 0; }
+    .category-wrap { width: 100%; }
+    .tier-select { font-size: 14px; }
+    .reorder-btns { flex-direction: row; }
+    .reorder-btn { width: 28px; height: 28px; }
+    .remove-btn { height: 35px; }
+    .entry-fields { padding: 10px; }
+    .generate-btn { font-size: 14px; padding: 12px; }
+    .output-topbar { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
+    .howto-card { padding: 16px; }
+    .output-box { font-size: 11px; }
+  }
 </style>
-
 </head>
 <body>
 
 <div class="page">
 
   <!-- Logo -->
-
   <div style="text-align:center;margin-bottom:24px;">
     <img src="https://cdn.prod.website-files.com/649ebf846c74f80e5bb24686/669db41ec44335c11195fcee_doingwell-logotype.webp" alt="Start Doing Well" style="height:36px;width:auto;" />
   </div>
 
   <!-- Header card -->
-
   <div class="card header-card">
     <h1>💰 Panic Meter Generator</h1>
     <p class="desc">Fill in your stories each week, hit generate, and paste the HTML straight into beehiiv. No coding needed.</p>
@@ -514,7 +512,6 @@ body { padding: 20px 12px 48px; }
   </div>
 
   <!-- Stories card -->
-
   <div class="card stories-card">
     <div class="section-head">
       <h1 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;">Your stories this week</h1>
@@ -561,7 +558,6 @@ body { padding: 20px 12px 48px; }
   <button class="generate-btn" onclick="generate()">Generate beehiiv HTML →</button>
 
   <!-- Output -->
-
   <div class="output-wrap" id="outputWrap">
     <div class="card">
       <div class="output-topbar">
@@ -586,7 +582,6 @@ body { padding: 20px 12px 48px; }
   </div>
 
   <!-- Footer -->
-
   <div class="footer">
     Made by <a href="https://www.thekreostudio.com" target="_blank">The Kreo Studio</a> for <a href="https://www.startdoingwell.com" target="_blank">Start Doing Well</a>
   <span style="display:block;margin-top:6px;font-size:11px;color:var(--text-subtle);">v1.0.1</span>
@@ -639,253 +634,246 @@ body { padding: 20px 12px 48px; }
         <div class="field-wrap">
           <label class="field-label">Body copy <span style="color:#dc2626;">*</span></label>
           <textarea id="body-${id}" placeholder="">${escAttr(body)}</textarea>
-
-```
-      <span class="field-hint">2–3 sentences, max 40–50 words. What happened, why it matters to the reader, and what to do?</span>
-    </div>
-    <div class="field-wrap">
-      <label class="field-label">Source URL <span style="color:#dc2626;">*</span></label>
-      <input type="url" id="url-${id}" placeholder="https://..." value="${escAttr(url) || 'https://'}" required />
-    </div>
-  </div>
-`;
-const unassigned = document.getElementById('unassigned-cards');
-if (tierDefault && tierDefault !== '') {
-  const tierGroup = document.getElementById('cards-' + tierDefault);
-  if (tierGroup) tierGroup.appendChild(div);
-  else unassigned.appendChild(div);
-} else {
-  unassigned.appendChild(div);
-}
-updateCount();
-updateReorderButtons();
-updateGroupVisibility();
-// Apply tint to category wrap
-applyTint(id, tier);
-```
-
-}
-
-function applyTint(id, tier) {
-const wrap = document.getElementById(‘catwrap-’ + id);
-if (wrap) {
-wrap.style.borderLeft = `3px solid ${tier.dot}`;
-wrap.style.paddingLeft = ‘11px’;
-}
-}
-
-function updateCategory(id) {
-const val = document.getElementById(‘tier-’+id).value;
-if (!val) return;
-const tier = TIERS.find(t => t.value === val);
-applyTint(id, tier);
-// Move card from wherever it is into the correct tier group
-const card = document.getElementById(‘card-’ + id);
-const targetGroup = document.getElementById(‘cards-’ + val);
-if (card && targetGroup) targetGroup.appendChild(card);
-updateReorderButtons();
-updateGroupVisibility();
-}
-
-function removeCard(id) {
-const el = document.getElementById(‘card-’ + id);
-if (el) { el.remove(); updateCount(); updateReorderButtons(); updateGroupVisibility(); }
-}
-
-function escAttr(str) {
-return str.replace(/”/g,’"’).replace(/’/g,’'’);
-}
-function escHTML(str) {
-return str.replace(/&/g,’&’).replace(/</g,’<’).replace(/>/g,’>’).replace(/”/g,’"’);
-}
-
-function getTier(card) {
-const n = card.id.replace(‘card-’, ‘’);
-return document.getElementById(‘tier-’ + n).value;
-}
-
-function moveCard(id, dir) {
-const card = document.getElementById(‘card-’ + id);
-if (!card) return;
-const group = card.parentElement;
-if (dir === -1) {
-const prev = card.previousElementSibling;
-if (prev) group.insertBefore(card, prev);
-} else {
-const next = card.nextElementSibling;
-if (next) group.insertBefore(next, card);
-}
-updateReorderButtons();
-}
-
-function updateReorderButtons() {
-[‘t1’,‘t2’,‘t3’,‘t4’].forEach(tier => {
-const group = document.getElementById(‘cards-’ + tier);
-if (!group) return;
-const cards = Array.from(group.querySelectorAll(’.entry-card’));
-cards.forEach((card, i) => {
-const id = card.id.replace(‘card-’, ‘’);
-const upBtn = document.getElementById(‘up-’ + id);
-const dnBtn = document.getElementById(‘dn-’ + id);
-if (upBtn) upBtn.disabled = (i === 0);
-if (dnBtn) dnBtn.disabled = (i === cards.length - 1);
-});
-});
-}
-
-function updateGroupVisibility() {
-[‘t1’,‘t2’,‘t3’,‘t4’].forEach(tier => {
-const group = document.getElementById(‘group-’ + tier);
-const cards = document.getElementById(‘cards-’ + tier);
-if (!group || !cards) return;
-group.classList.toggle(‘visible’, cards.children.length > 0);
-});
-}
-
-function showError(msg) {
-const el = document.getElementById(‘errorBanner’);
-el.textContent = ’⚠ ’ + msg;
-el.classList.add(‘visible’);
-el.scrollIntoView({ behavior: ‘smooth’, block: ‘nearest’ });
-}
-
-function hideError() {
-const el = document.getElementById(‘errorBanner’);
-if (el) el.classList.remove(‘visible’);
-}
-
-function generate() {
-hideError();
-const cards = document.querySelectorAll(’#cardsList .entry-card’);
-if (!cards.length) { showError(‘Add at least one story first!’); return; }
-
-```
-// Collect cards in tier group order
-const sortedCards = ['t1','t2','t3','t4'].flatMap(tier => {
-  const group = document.getElementById('cards-' + tier);
-  return group ? Array.from(group.querySelectorAll('.entry-card')) : [];
-});
-
-let cardsHTML = '';
-for (const card of sortedCards) {
-  const n = card.id.replace('card-','');
-  const tierVal = document.getElementById('tier-'+n).value;
-  const tier    = TIERS.find(t => t.value === tierVal);
-  const rawTitle = document.getElementById('title-'+n).value.trim();
-  const rawBody  = document.getElementById('body-'+n).value.trim();
-  const rawUrl   = document.getElementById('url-'+n).value.trim();
-  const urlEmpty = !rawUrl || rawUrl === 'https://' || rawUrl === 'http://';
-  const urlValid = urlEmpty ? false : /^https?:\/\/.+\..+/.test(rawUrl);
-  if (!tierVal || !rawTitle || !rawBody || !rawUrl) {
-    const missing = !tierVal ? 'urgency tier' : !rawTitle ? 'headline' : !rawBody ? 'body copy' : 'source URL';
-    showError('Please fill in the ' + missing + ' for every story before generating!');
-    return;
+          <span class="field-hint">2–3 sentences, max 40–50 words. What happened, why it matters to the reader, and what to do?</span>
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Source URL <span style="color:#dc2626;">*</span></label>
+          <input type="url" id="url-${id}" placeholder="https://..." value="${escAttr(url) || 'https://'}" required />
+        </div>
+      </div>
+    `;
+    const unassigned = document.getElementById('unassigned-cards');
+    if (tierDefault && tierDefault !== '') {
+      const tierGroup = document.getElementById('cards-' + tierDefault);
+      if (tierGroup) tierGroup.appendChild(div);
+      else unassigned.appendChild(div);
+    } else {
+      unassigned.appendChild(div);
+    }
+    updateCount();
+    updateReorderButtons();
+    updateGroupVisibility();
+    // Apply tint to category wrap
+    applyTint(id, tier);
   }
-  const title = escHTML(rawTitle);
-  const body  = escHTML(rawBody);
-  const url   = urlEmpty ? '#' : escHTML(rawUrl);
 
-  const cardLines = [
-    '      <div style="border-radius:8px;padding:12px 14px;',
-    `             background:${tier.bg};margin-bottom:8px;">`,
-    `        <p style="`,
-    `           font-size:11px;font-weight:700;letter-spacing:0.06em;`,
-    `           text-transform:uppercase;color:${tier.color};`,
-    `           margin:0 0 5px 0;">${tier.label}</p>`,
-    `        <p style="`,
-    `           font-size:14px;font-weight:700;color:#1a1a1a;`,
-    `           line-height:1.4;margin:0 0 6px 0;">${title}</p>`,
-  ];
-  if (body) {
-    cardLines.push(
-      `        <p style="`,
-      `           font-size:13px;color:#555555;`,
-      `           line-height:1.6;margin:0 0 8px 0;">${body}</p>`
-    );
+  function applyTint(id, tier) {
+    const wrap = document.getElementById('catwrap-' + id);
+    if (wrap) {
+      wrap.style.borderLeft = `3px solid ${tier.dot}`;
+      wrap.style.paddingLeft = '11px';
+    }
   }
-  cardLines.push(
-    `        <a href="${url}"`,
-    `           style="`,
-    `           font-size:12px;font-weight:700;`,
-    `           color:${tier.color};text-decoration:underline;">Source</a>`,
-    '      </div>'
-  );
-  cardsHTML += '\n' + cardLines.join('\n');
-}
 
-if (!cardsHTML.trim()) { showError('Please fill in at least one headline!'); return; }
+  function updateCategory(id) {
+    const val = document.getElementById('tier-'+id).value;
+    if (!val) return;
+    const tier = TIERS.find(t => t.value === val);
+    applyTint(id, tier);
+    // Move card from wherever it is into the correct tier group
+    const card = document.getElementById('card-' + id);
+    const targetGroup = document.getElementById('cards-' + val);
+    if (card && targetGroup) targetGroup.appendChild(card);
+    updateReorderButtons();
+    updateGroupVisibility();
+  }
 
-// Build clean indented HTML
-const thermo = [
-  '<div style="width:8px;flex-shrink:0;border-radius:20px;',
-  'background:linear-gradient(to bottom,',
-  '#3b1f6e 0%,#6d43b5 35%,#9f7dd6 65%,#d4c5f5 100%);',
-  '"></div>'
-].join('');
+  function removeCard(id) {
+    const el = document.getElementById('card-' + id);
+    if (el) { el.remove(); updateCount(); updateReorderButtons(); updateGroupVisibility(); }
+  }
 
-const html = [
-  '<!-- Personal Finance Panic Meter -->',
-  '<div style="max-width:600px;margin:0 auto;">',
-  '',
-  '  <div style="display:flex;gap:12px;align-items:stretch;">',
-  '    ' + thermo,
-  '    <div style="flex:1;">',
-  cardsHTML,
-  '    </div>',
-  '  </div>',
-  '',
-  '  <p style="font-size:11px;',
-  '     color:#aaaaaa;font-style:italic;text-align:center;margin-top:14px;">',
-  '    The Panic Meter reflects our editorial read on urgency &mdash; not financial advice.',
-  '  </p>',
-  '',
-  '</div>'
-].join('\n');
+  function escAttr(str) {
+    return str.replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function escHTML(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
 
-document.getElementById('outputBox').textContent = html;
-document.getElementById('outputPreview').innerHTML = html;
-const wrap = document.getElementById('outputWrap');
-wrap.classList.add('visible');
-wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
-// Default to preview tab
-switchTab('preview');
-const btn = document.getElementById('copyBtn');
-btn.textContent = 'Copy HTML';
-btn.classList.remove('copied');
-```
+  function getTier(card) {
+    const n = card.id.replace('card-', '');
+    return document.getElementById('tier-' + n).value;
+  }
 
-}
+  function moveCard(id, dir) {
+    const card = document.getElementById('card-' + id);
+    if (!card) return;
+    const group = card.parentElement;
+    if (dir === -1) {
+      const prev = card.previousElementSibling;
+      if (prev) group.insertBefore(card, prev);
+    } else {
+      const next = card.nextElementSibling;
+      if (next) group.insertBefore(next, card);
+    }
+    updateReorderButtons();
+  }
 
-function switchTab(tab) {
-const preview = document.getElementById(‘outputPreview’);
-const code = document.getElementById(‘outputBox’);
-const tabPreview = document.getElementById(‘tabPreview’);
-const tabCode = document.getElementById(‘tabCode’);
-const copyBtn = document.getElementById(‘copyBtn’);
-if (tab === ‘preview’) {
-preview.style.display = ‘block’;
-code.style.display = ‘none’;
-tabPreview.classList.add(‘active’);
-tabCode.classList.remove(‘active’);
-copyBtn.style.display = ‘none’;
-} else {
-preview.style.display = ‘none’;
-code.style.display = ‘block’;
-tabPreview.classList.remove(‘active’);
-tabCode.classList.add(‘active’);
-copyBtn.style.display = ‘’;
-}
-}
+  function updateReorderButtons() {
+    ['t1','t2','t3','t4'].forEach(tier => {
+      const group = document.getElementById('cards-' + tier);
+      if (!group) return;
+      const cards = Array.from(group.querySelectorAll('.entry-card'));
+      cards.forEach((card, i) => {
+        const id = card.id.replace('card-', '');
+        const upBtn = document.getElementById('up-' + id);
+        const dnBtn = document.getElementById('dn-' + id);
+        if (upBtn) upBtn.disabled = (i === 0);
+        if (dnBtn) dnBtn.disabled = (i === cards.length - 1);
+      });
+    });
+  }
 
-function copyHTML() {
-const text = document.getElementById(‘outputBox’).textContent;
-navigator.clipboard.writeText(text).then(() => {
-const btn = document.getElementById(‘copyBtn’);
-btn.textContent = ‘Copied!’;
-btn.classList.add(‘copied’);
-setTimeout(() => { btn.textContent = ‘Copy’; btn.classList.remove(‘copied’); }, 2500);
-});
-}
+  function updateGroupVisibility() {
+    ['t1','t2','t3','t4'].forEach(tier => {
+      const group = document.getElementById('group-' + tier);
+      const cards = document.getElementById('cards-' + tier);
+      if (!group || !cards) return;
+      group.classList.toggle('visible', cards.children.length > 0);
+    });
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('errorBanner');
+    el.textContent = '⚠ ' + msg;
+    el.classList.add('visible');
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function hideError() {
+    const el = document.getElementById('errorBanner');
+    if (el) el.classList.remove('visible');
+  }
+
+  function generate() {
+    hideError();
+    const cards = document.querySelectorAll('#cardsList .entry-card');
+    if (!cards.length) { showError('Add at least one story first!'); return; }
+
+    // Collect cards in tier group order
+    const sortedCards = ['t1','t2','t3','t4'].flatMap(tier => {
+      const group = document.getElementById('cards-' + tier);
+      return group ? Array.from(group.querySelectorAll('.entry-card')) : [];
+    });
+
+    let cardsHTML = '';
+    for (const card of sortedCards) {
+      const n = card.id.replace('card-','');
+      const tierVal = document.getElementById('tier-'+n).value;
+      const tier    = TIERS.find(t => t.value === tierVal);
+      const rawTitle = document.getElementById('title-'+n).value.trim();
+      const rawBody  = document.getElementById('body-'+n).value.trim();
+      const rawUrl   = document.getElementById('url-'+n).value.trim();
+      const urlEmpty = !rawUrl || rawUrl === 'https://' || rawUrl === 'http://';
+      const urlValid = urlEmpty ? false : /^https?:\/\/.+\..+/.test(rawUrl);
+      if (!tierVal || !rawTitle || !rawBody || !rawUrl) {
+        const missing = !tierVal ? 'urgency tier' : !rawTitle ? 'headline' : !rawBody ? 'body copy' : 'source URL';
+        showError('Please fill in the ' + missing + ' for every story before generating!');
+        return;
+      }
+      const title = escHTML(rawTitle);
+      const body  = escHTML(rawBody);
+      const url   = urlEmpty ? '#' : escHTML(rawUrl);
+
+      const cardLines = [
+        '      <div style="border-radius:8px;padding:12px 14px;',
+        `             background:${tier.bg};margin-bottom:8px;">`,
+        `        <p style="`,
+        `           font-size:11px;font-weight:700;letter-spacing:0.06em;`,
+        `           text-transform:uppercase;color:${tier.color};`,
+        `           margin:0 0 5px 0;">${tier.label}</p>`,
+        `        <p style="`,
+        `           font-size:14px;font-weight:700;color:#1a1a1a;`,
+        `           line-height:1.4;margin:0 0 6px 0;">${title}</p>`,
+      ];
+      if (body) {
+        cardLines.push(
+          `        <p style="`,
+          `           font-size:13px;color:#555555;`,
+          `           line-height:1.6;margin:0 0 8px 0;">${body}</p>`
+        );
+      }
+      cardLines.push(
+        `        <a href="${url}"`,
+        `           style="`,
+        `           font-size:12px;font-weight:700;`,
+        `           color:${tier.color};text-decoration:underline;">Source</a>`,
+        '      </div>'
+      );
+      cardsHTML += '\n' + cardLines.join('\n');
+    }
+
+    if (!cardsHTML.trim()) { showError('Please fill in at least one headline!'); return; }
+
+    // Build clean indented HTML
+    const thermo = [
+      '<div style="width:8px;flex-shrink:0;border-radius:20px;',
+      'background:linear-gradient(to bottom,',
+      '#3b1f6e 0%,#6d43b5 35%,#9f7dd6 65%,#d4c5f5 100%);',
+      '"></div>'
+    ].join('');
+
+    const html = [
+      '<!-- Personal Finance Panic Meter -->',
+      '<div style="max-width:600px;margin:0 auto;">',
+      '',
+      '  <div style="display:flex;gap:12px;align-items:stretch;">',
+      '    ' + thermo,
+      '    <div style="flex:1;">',
+      cardsHTML,
+      '    </div>',
+      '  </div>',
+      '',
+      '  <p style="font-size:11px;',
+      '     color:#aaaaaa;font-style:italic;text-align:center;margin-top:14px;">',
+      '    The Panic Meter reflects our editorial read on urgency &mdash; not financial advice.',
+      '  </p>',
+      '',
+      '</div>'
+    ].join('\n');
+
+    document.getElementById('outputBox').textContent = html;
+    document.getElementById('outputPreview').innerHTML = html;
+    const wrap = document.getElementById('outputWrap');
+    wrap.classList.add('visible');
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Default to preview tab
+    switchTab('preview');
+    const btn = document.getElementById('copyBtn');
+    btn.textContent = 'Copy HTML';
+    btn.classList.remove('copied');
+  }
+
+  function switchTab(tab) {
+    const preview = document.getElementById('outputPreview');
+    const code = document.getElementById('outputBox');
+    const tabPreview = document.getElementById('tabPreview');
+    const tabCode = document.getElementById('tabCode');
+    const copyBtn = document.getElementById('copyBtn');
+    if (tab === 'preview') {
+      preview.style.display = 'block';
+      code.style.display = 'none';
+      tabPreview.classList.add('active');
+      tabCode.classList.remove('active');
+      copyBtn.style.display = 'none';
+    } else {
+      preview.style.display = 'none';
+      code.style.display = 'block';
+      tabPreview.classList.remove('active');
+      tabCode.classList.add('active');
+      copyBtn.style.display = '';
+    }
+  }
+
+  function copyHTML() {
+    const text = document.getElementById('outputBox').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyBtn');
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2500);
+    });
+  }
 </script>
 
 </body>
