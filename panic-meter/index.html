@@ -584,7 +584,7 @@
   <!-- Footer -->
   <div class="footer">
     Made by <a href="https://www.thekreostudio.com" target="_blank">The Kreo Studio</a> for <a href="https://www.startdoingwell.com" target="_blank">Start Doing Well</a>
-  <span style="display:block;margin-top:6px;font-size:11px;color:var(--text-subtle);">v1.0.1</span>
+  <span style="display:block;margin-top:6px;font-size:11px;color:var(--text-subtle);">v1.1.0</span>
   </div>
 
 </div>
@@ -776,21 +776,21 @@
       const url   = urlEmpty ? '#' : escHTML(rawUrl);
 
       const cardLines = [
-        '      <div style="border-radius:8px;padding:12px 14px;',
+        '      <div style="border-radius:8px;padding:8px 12px;',
         `             background:${tier.bg};margin-bottom:8px;">`,
         `        <p style="`,
         `           font-size:11px;font-weight:700;letter-spacing:0.06em;`,
         `           text-transform:uppercase;color:${tier.color};`,
-        `           margin:0 0 5px 0;">${tier.label}</p>`,
+        `           margin:0 0 3px 0;">${tier.label}</p>`,
         `        <p style="`,
         `           font-size:14px;font-weight:700;color:#1a1a1a;`,
-        `           line-height:1.4;margin:0 0 6px 0;">${title}</p>`,
+        `           line-height:1.4;margin:0 0 4px 0;">${title}</p>`,
       ];
       if (body) {
         cardLines.push(
           `        <p style="`,
           `           font-size:13px;color:#555555;`,
-          `           line-height:1.6;margin:0 0 8px 0;">${body}</p>`
+          `           line-height:1.5;margin:0 0 5px 0;">${body}</p>`
         );
       }
       cardLines.push(
@@ -809,7 +809,7 @@
     const thermo = [
       '<div style="width:8px;flex-shrink:0;border-radius:20px;',
       'background:linear-gradient(to bottom,',
-      '#3b1f6e 0%,#6d43b5 35%,#9f7dd6 65%,#d4c5f5 100%);',
+      '#c0392b 0%,#e67e22 35%,#c9a800 65%,#3d9e5f 100%);',
       '"></div>'
     ].join('');
 
